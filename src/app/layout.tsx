@@ -7,14 +7,38 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans", weight: ["400", "500", "700"] });
 
 export const metadata: Metadata = {
-  title: "Bui Dinh Nhat | Senior Fullstack Engineer",
-  description: "Portfolio of Bui Dinh Nhat, a Senior Fullstack Engineer with 8+ years of experience specializing in scalable architecture and modern web technologies.",
+  metadataBase: new URL("https://nhatbui.site"),
+  title: {
+    default: "Nhat Bui | Senior Fullstack Engineer",
+    template: "%s | Nhat Bui"
+  },
+  description: "Portfolio of Nhat Bui, a Senior Fullstack Engineer with 8+ years of experience specializing in scalable architecture, Next.js, and modern web technologies.",
   openGraph: {
-    title: "Bui Dinh Nhat | Senior Fullstack Engineer",
-    description: "8+ Years of Experience in Fullstack Development.",
-    type: "profile",
+    title: "Nhat Bui | Senior Fullstack Engineer",
+    description: "Building scalable, high-performance web applications with modern tech stacks.",
+    url: "https://nhatbui.site",
+    siteName: "Nhat Bui Portfolio",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Nhat Bui - Senior Fullstack Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nhat Bui | Senior Fullstack Engineer",
+    description: "Building scalable, high-performance web applications with modern tech stacks.",
+    creator: "@nhatbui",
     images: ["/og.jpg"],
-  }
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
