@@ -1,65 +1,47 @@
-import Image from "next/image";
+import { Hero } from "@/components/Hero";
+import { AboutSection } from "@/components/UI/AboutSection";
+import { BentoGrid } from "@/components/UI/BentoGrid";
+import { ExperienceSection } from "@/components/UI/ExperienceSection";
+import { TechStack } from "@/components/UI/TechStack";
+import { Toolbox } from "@/components/UI/Toolbox";
+import { Testimonials } from "@/components/UI/Testimonials";
+import { Terminal } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen">
+      <div className="relative z-10">
+        <Hero />
+
+        {/* Use a gradient mask instead of a solid background to let the particles show through */}
+        <div className="bg-gradient-to-b from-transparent via-background/80 to-background/90 backdrop-blur-sm border-t border-white/5">
+          <AboutSection />
+          <TechStack />
+          <Toolbox />
+          <ExperienceSection />
+
+          <div className="container mx-auto px-6 py-32">
+            <h2 className="text-4xl md:text-5xl font-bold font-display mb-16">
+              Featured Work <span className="text-accent">.</span>
+            </h2>
+            <BentoGrid />
+          </div>
+
+          <Testimonials />
+
+          {/* Footer / Terminal */}
+          <footer className="py-20 border-t border-white/10 bg-black/80">
+            <div className="max-w-4xl mx-auto px-4 text-center">
+              <Terminal className="w-12 h-12 text-accent mx-auto mb-6" />
+              <h3 className="text-2xl font-display font-bold mb-4">Let's build something impossible.</h3>
+              <a href="mailto:nhat@example.com" className="text-gray-400 hover:text-accent transition-colors font-mono">
+                nhat@example.com
+              </a>
+              <p className="mt-8 text-sm text-gray-600 font-mono">© {new Date().getFullYear()} Bui Dinh Nhat. System Online.</p>
+            </div>
+          </footer>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
