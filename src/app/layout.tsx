@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, DM_Sans } from "next/font/google";
 import { ParticleWave } from "@/components/Canvas/ParticleWave";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk", weight: ["300", "400", "500", "600", "700"] });
@@ -74,6 +75,7 @@ export default function RootLayout({
           }}
         />
       </body>
+      <GoogleAnalytics gaId="G-Q4Z3ESW6MZ" />
     </html>
   );
 }
