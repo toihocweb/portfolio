@@ -1,6 +1,7 @@
 "use client";
 
 import { ScrollReveal } from "./UI/ScrollReveal";
+import { SocialMediaButton } from "./UI/SocialMediaButton";
 
 export function Hero() {
     return (
@@ -21,10 +22,16 @@ export function Hero() {
                 </ScrollReveal>
 
                 <ScrollReveal delay={0.2}>
-                    <p className="text-lg md:text-xl text-gray-400 max-w-lg mx-auto font-mono">
+                    <p className="text-lg md:text-xl text-gray-400 max-w-lg mx-auto font-mono mb-8">
                         Senior Fullstack Engineer with 8+ years of experience. <br />
                         Crafting immersive web experiences with code, motion, and 3D.
                     </p>
+                </ScrollReveal>
+
+                <ScrollReveal delay={0.3}>
+                    <div className="flex items-center justify-center">
+                        <SocialMediaButton />
+                    </div>
                 </ScrollReveal>
             </div>
 

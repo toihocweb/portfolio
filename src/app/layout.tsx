@@ -37,9 +37,6 @@ export const metadata: Metadata = {
     creator: "@nhatbui",
     images: ["/og.jpg"],
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({
@@ -67,7 +64,7 @@ export default function RootLayout({
               "url": "https://nhatbui.site",
               "sameAs": [
                 "https://github.com/toihocweb",
-                "https://www.linkedin.com/",
+                "https://www.linkedin.com/in/nhatbui1995/",
                 "https://www.facebook.com/thaynhatdepchai/"
               ],
               "knowsAbout": ["Fullstack Development", "React", "Node.js", "System Architecture", "AWS"]
