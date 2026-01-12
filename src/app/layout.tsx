@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, DM_Sans } from "next/font/google";
 import { ParticleWave } from "@/components/Canvas/ParticleWave";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { CursorEffect } from "@/components/UI/CursorEffect";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk", weight: ["300", "400", "500", "600", "700"] });
@@ -46,7 +47,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${dmSans.variable}`}>
-      <body className="antialiased bg-background text-foreground font-body selection:bg-accent selection:text-black">
+      <body className="antialiased bg-background text-foreground font-body selection:bg-accent selection:text-black cursor-none">
+        <CursorEffect />
         <div className="fixed inset-0 z-0 pointer-events-none">
           <ParticleWave />
         </div>

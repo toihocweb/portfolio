@@ -16,8 +16,11 @@ export function Hero() {
                 </ScrollReveal>
 
                 <ScrollReveal delay={0.1}>
-                    <h1 className="text-6xl md:text-9xl font-bold font-display tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 uppercase">
-                        NHAT BUI
+                    <h1 className="text-6xl md:text-9xl font-bold font-display tracking-tighter mb-6 uppercase">
+                        <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 block">NHAT BUI</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-b from-accent to-accent/50 block md:text-8xl text-5xl mt-2" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.2)' }}>
+                            FULLSTACK
+                        </span>
                     </h1>
                 </ScrollReveal>
 
