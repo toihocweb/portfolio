@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ScrollReveal } from "./ScrollReveal";
 
 export function AboutSection() {
@@ -11,8 +12,20 @@ export function AboutSection() {
                 <ScrollReveal>
                     <div className="relative">
                         <div className="absolute -inset-4 bg-accent/20 rounded-3xl blur-2xl -z-10" />
-                        <div className="aspect-square rounded-2xl overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center">
-                            <span className="text-9xl opacity-20">👨‍💻</span>
+                        <div className="aspect-square relative rounded-2xl overflow-hidden p-[3px]">
+                            {/* Lightning Effect */}
+                            <div className="absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#000000_0%,#0ea5e9_50%,#ffffff_100%)] opacity-100" />
+                            <div className="absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#000000_0%,#0ea5e9_50%,#ffffff_100%)] opacity-100 blur-md" />
+
+                            {/* Inner Image */}
+                            <div className="relative h-full w-full rounded-2xl overflow-hidden bg-background">
+                                <Image
+                                    src="/og.jpg"
+                                    alt="Nhat Bui"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
                         </div>
                     </div>
                 </ScrollReveal>
